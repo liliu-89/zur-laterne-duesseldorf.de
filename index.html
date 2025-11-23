@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <script>
+    fetch('/includes/head.html')
+      .then(r => r.text())
+      .then(h => document.head.insertAdjacentHTML('afterbegin', h));
+  </script>  
+  
+  <title>Zur Laterne – Traditionslokal in Düsseldorf-Oberkassel | Rheinische Küche & Füchschen Alt</title>
+  <meta name="description" content="Zur Laterne am Belsenplatz: Rheinische & gut bürgerliche Küche, Muscheln, Reibekuchen. Füchschen Alt vom Fass. Täglich ab 17 Uhr. Reservierung: 0211 551570.">
+  <meta name="theme-color" content="#bd2630">
+  <meta property="og:locale" content="de_DE">
+
+
+  <meta property="og:title" content="Zur Laterne – Traditionslokal in Düsseldorf-Oberkassel">
+  <meta property="og:description" content="Rheinische Küche, Muscheln, Reibekuchen & Füchschen Alt vom Fass.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.zur-laterne-duesseldorf.de/">
+  <meta property="og:image" content="https://www.zur-laterne-duesseldorf.de/images/Zur-Laterne-Fassade.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Restaurant",
+    "name":"Zur Laterne",
+    "image":"https://www.zur-laterne-duesseldorf.de/images/Zur-Laterne-Fassade.png",
+    "address":{"@type":"PostalAddress","streetAddress":"Belsenstr. 8","postalCode":"40545","addressLocality":"Düsseldorf","addressCountry":"DE"},
+    "geo":{"@type":"GeoCoordinates","latitude":51.230461,"longitude":6.745877},
+    "telephone":"+49 211 551570",
+    "servesCuisine":["Deutsch","Rheinisch","Gut bürgerlich"],
+    "priceRange":"€€",
+    "url":"https://www.zur-laterne-duesseldorf.de/",
+    "menu":"https://www.zur-laterne-duesseldorf.de/files/Speisekarte_Zur-Laterne_202511.pdf",
+    "acceptsReservations":"Telephone",
+    "sameAs":[
+      "https://maps.google.com/?q=Zur+Laterne+Belsenstr+8+40545+D%C3%BCsseldorf"
+    ],
+    "openingHoursSpecification":[
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"17:00","closes":"23:59"}
+    ]
+  }
+  </script>
+
+  <link rel="canonical" href="https://www.zur-laterne-duesseldorf.de/">
+  <link rel="preload" as="image" href="/images/Zur-Laterne-Aussenbereich.png" imagesrcset="/images/Zur-Laterne-Aussenbereich.png 1600w" imagesizes="100vw" fetchpriority="high">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <a href="#">Zur Laterne</a>
+      </div>
+
+      <!-- Desktop-Navigation -->
+      <nav aria-label="Hauptnavigation">
+        <a class="active" href="#start">Startseite</a>
+        <a href="#speisekarte">Speisekarte</a>
+        <a href="#kontakt">Öffnungszeiten & Kontakt</a>
+        <a href="#neuigkeiten">Neuigkeiten</a>
+      </nav>
+
+      <button id="menuBtn" class="menu-btn" aria-label="Menü öffnen">
+        <span class="menu-icon"></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="drawer" id="drawer">
+      <a href="#start" onclick="closeDrawer()">Startseite</a>
+      <a href="#speisekarte" onclick="closeDrawer()">Speisekarte</a>
+      <a href="#kontakt" onclick="closeDrawer()">Öffnungszeiten & Kontakt</a>
+      <a href="#neuigkeiten" onclick="closeDrawer()">Neuigkeiten</a>
+    </div>
+  </header>
+
+  <main id="start">
+    <section class="hero">
+  <div class="hero_bg" style="background-image:url('/images/Zur-Laterne-Aussenbereich.png')"></div>
+  <div class="hero_overlay"></div>
+  <div class="hero_content">
+
+      <h1>Zur Laterne</h1>     
+      <h2>Das Traditionslokal mit Brauhaus-Charakter am Belsenplatz in Düsseldorf-Oberkassel</h2>
+      <p>Bekannt für rheinische Küche, Muschelspezialitäten, hausgemachte Reibekuchen und Füchschen Alt vom Fass.</p>
+      <div class="cta">
+        <md-filled-button style="width:50%" onclick="window.location.href='tel:+49211551570'" class="btn-filled">
+          <strong>Jetzt telefonisch reservieren</strong>
+        </md-filled-button>
+      </div>
+    </section>
+
+    <section class="container" aria-label="Impressionen">
+      <div class="card">
+        <div class="card-content">
+          <h2>Willkommen im Kult-Lokal 'Zur Laterne'</h2>
+        </div>
+        <img width="100%" src="/images/Zur-Laterne-Fassade.png" width="1000" height="663" loading="lazy" alt="Fassade Zur Laterne"/>
+        <div class="card-content">
+          <p>Seit fast 50 Jahren ist die 'Zur Laterne' ein fester Bestandteil in Düsseldorf-Oberkassel. Das urige Traditionslokal mit Brauhaus-Charakter steht für rheinische Küche und Füchschen Alt vom Fass. Genießen Sie unsere Muschelspezialitäten, hausgemachte Reibekuchen (montags & dienstags) oder Bratwurst, Kalbsbratwurst, Fleischkäse und Koteletts von der Metzgerei Schlösser auf der Düsseldorfer Oststraße. Vom Fass schenken wir Füchschen Alt direkt aus der Düsseldorfer Altstadt aus. Ob für ein gemütliches Abendessen oder den Stammtisch – bei uns sind Sie herzlich willkommen!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="strip" id="speisekarte" aria-label="Speisekarte Teaser">
+      <div class="container">
+        <h2 style="margin:0 0 .5rem; text-align: center;" >Auszug aus der Speisekarte (Stand November 2025)</h2>
+        <div class="grid">
+          <div class="card">
+            <div class="card-content">
+              <img src="/images/Speisekarte-Zur Laterne1.png">
+              <md-filled-button class="btn-filled">
+                <a href="/files/Speisekarte_Zur-Laterne_202511.pdf" target="_blank"><strong>Ansehen</strong></a>
+              </md-filled-button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <img src="/images/Getränkekarte-Zur Laterne.png">
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <img src="/images/Tageskarte-Zur-Laterne.png">
+              <md-filled-button class="btn-filled">
+                <a href="/files/Tageskarte_Zur-Laterne_202511.pdf" target="_blank"><strong>Tageskarte</strong></a>
+              </md-filled-button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <img src="/images/Muschelkarte-Zur-Laterne.png">
+              <md-filled-button class="btn-filled">
+                <a href="/files/Muschelkarte_Zur-Laterne_202511.pdf" target="_blank"><strong>Muschelkarte</strong></a>
+              </md-filled-button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="kontakt" aria-label="Kontakt">
+  
+      <div class="container" style="text-align: center;">
+        <h2>Öffnungszeiten</h2>
+        <p>Montag bis Samstag: 17:00 - 24:00 Uhr<br>Sonntag: geschlossen</p>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+              <div class="hero_content" style="color: rgb(31, 31, 31)">
+                <h2>Kontakt & Reservierung</h2>
+                <p><strong>Zur Laterne</strong><br>Belsenstr. 8<br>40545 Düsseldorf</p>
+                <p><a class="btn-outlined" href="https://maps.google.com/?q=Zur+Laterne+Belsenstr+8+40545+D%C3%BCsseldorf" target="_blank" rel="noopener noreferrer">Route planen</a></p>
+                <p style="color: rgb(31, 31, 31)">Telefonisch reservieren Sie am schnellsten einen Tisch.</p>
+                <div class="cta">
+                  <md-filled-button class="btn-filled" style="width:50%" onclick="window.location.href='tel:+49211551570'">
+                    <strong>Anrufen & reservieren</strong>
+                  </md-filled-button>
+                </div>
+              </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="neuigkeiten" aria-label="Neuigkeiten">
+      <div class="container">
+        <h2 style="text-align: center;">Neuigkeiten</h2>
+        <div class="flex">
+          <div class="card">
+            <img width="100%" src="/images/kartenzahlung-akzeptiert.png" alt="Logos verschiedener Anbieter für die Kartenzahlung"/>
+            <div class="card-content">
+              <h3>Zahlung mit Karte möglich</h3>
+              <p>Wir freuen uns, bekannt zu geben, dass wir nun Kartenzahlungen mit SumUp anbieten werden! Das bedeutet, dass man nicht nur mit klassischen Bank- und Kreditkarten bezahlen kann, sondern auch mit dem Smartphone via GPay, SamsungPay und ApplePay.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img width="100%" src="/images/Muscheln-mit-schwarzbrot.png" alt="Muscheln mit Schwarzbrot"/>
+            <div class="card-content">
+              <h3>Es ist wieder Saison für unsere Muschelspezialitäten</h3>
+              <p>'Zur Laterne' ist in Düsseldorf bekannt für die leckeren Muscheln. Diese bekommen wir frisch von Prins & Dingemanse aus den Niederlanden.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img width="100%" src="/images/Mo-Di-Reibekuchen.png" alt="Drei Frische Reibekuchen mit Apfelkompott"/>
+            <div class="card-content">
+              <h3>Montags & Dienstags frische Reibekuchen mit Apfelkompott</h3>
+              <p>Jeden Montag und Dienstag hausgemachte Reibekuchen mit Schwarzbrot, Butter und Apfelkompott</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="strip">
+      <div class="container">
+        <h2 style="text-align: center;">Zur Laterne in der Presse</h2>
+        <div class="grid">
+          <a href="https://rp-online.de/nrw/staedte/duesseldorf/restaurants-und-cafes/duesseldorf-oberkassel-nachfolger-fuer-kult-lokal-zur-laterne-gesucht_aid-53540573" target="_blank" rel="noopener noreferrer">
+            <div class="card">
+              <img src="/images/RP-Artikel-Nachfolger-thumb.png" alt="Rheinische Post Artikel über Werner"  width="100%"/>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="Bewertungen" aria-label="Bewertungen">
+  <div class="container">
+    <h2 style="text-align: center;">Unsere Bewertungen</h2>
+
+    <!-- Slot genau an der Zielposition -->
+    <div id="reviews-slot">
+      <!-- Platzhalter bis Consent -->
+      <div id="reviews-placeholder" class="card" style="padding:1rem;text-align:center">
+        <a href="https://www.google.com/search?num=10&gl=de&hl=de-DE&sca_esv=290a3b6ea097391b&cs=0&output=search&tbm=lcl&kgmid=/g/1tfkdnzf&q=Zur+Laterne&shndl=30&source=sh/x/kp/local/m1/1&kgs=40129a99f2bb16db&shem=shrtsdl&utm_source=shrtsdl,sh/x/kp/local/m1/1#rlfi=hd:;si:7834608289423625998,l,ChdadXIgTGF0ZXJuZSBEw7xzc2VsZG9yZpIBBmJpc3Rybw;mv:[[51.23109227731903,6.7466087195674165],[51.23073232268097,6.7460338804325835]]" target="_blank" rel="noopener noreferrer">
+          <img src="/images/platzhalter-bewertungen.png" alt="Google Bewertungen">
+        </a>
+      </div>
+
+      <!-- Zielcontainer für Elfsight (zunächst verborgen) -->
+      <div id="reviews-widget" style="display:none">
+        <div class="elfsight-app-021edd47-f77e-438e-b070-e113914d7604" data-elfsight-app-lazy></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <strong>Zur Laterne</strong><br/>
+        Belsenstr. 8 · 40545 Düsseldorf
+      </div>
+      <div>
+        <a href="/impressum">Impressum</a> · <a href="datenschutz">Datenschutz</a> · <a href="#" onclick="openConsentBanner();return false;">Cookie-Einstellungen</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const drawer  = document.getElementById('drawer');
+    const closeDrawer = () => {
+      drawer.classList.remove('open');
+      menuBtn.classList.remove('open');
+    };
+    menuBtn.addEventListener('click', () => {
+      drawer.classList.toggle('open');
+      menuBtn.classList.toggle('open');
+    });
+    window.closeDrawer = closeDrawer;
+    </script>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        const targetId = this.getAttribute("href").slice(1);
+        const target = document.getElementById(targetId);
+
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+        }
+      });
+    });
+  });
+</script>
+
+<!-- Consent-Banner Placeholder -->
+<div id="consent-placeholder"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("/includes/consent-banner.html", { cache: "no-store" })
+    .then(res => res.ok ? res.text() : Promise.reject(res))
+    .then(html => {
+      document.getElementById("consent-placeholder").innerHTML = html;
+
+      // Danach Banner-Skript laden
+      const script = document.createElement("script");
+      script.src = "/js/consent-banner.js";
+      script.defer = true;
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error("Consent include konnte nicht geladen werden:", err));
+});
+</script>
+
+</body>
+</html>

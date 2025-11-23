@@ -1,0 +1,46 @@
+<div id="consent-banner" hidden aria-live="polite">
+  <div class="cb-overlay" role="presentation"></div>
+
+  <div class="cb-box"
+       role="dialog"
+       aria-modal="true"
+       aria-labelledby="cb-title"
+       aria-describedby="cb-desc">
+    <div class="cb-inner">
+      <h2 id="cb-title">Datenschutz-Einstellungen</h2>
+      <p id="cb-desc" class="cb-desc">
+        Wir verwenden Cookies und ähnliche Technologien. <strong>Essentiell</strong> ist erforderlich.
+        <strong>Statistiken</strong> helfen uns, die Website zu verbessern.
+        <strong>Marketing</strong> ermöglicht personalisierte Inhalte.
+      </p>
+
+      <div class="cb-switches" role="group" aria-label="Einwilligungsoptionen">
+        <label class="cb-switch">
+          <input type="checkbox" id="toggle-essential" checked disabled>
+          Essentiell (immer aktiv)
+        </label>
+
+        <label class="cb-switch">
+          <input type="checkbox" id="toggle-statistics">
+          Statistiken
+        </label>
+
+        <label class="cb-switch">
+          <input type="checkbox" id="toggle-marketing">
+          Marketing
+        </label>
+      </div>
+
+      <div class="cb-actions">
+        <button id="btn-accept-all" class="cb-btn cb-btn-primary" type="button">Alle akzeptieren</button>
+        <button id="btn-accept-selection" class="cb-btn cb-btn-tonal" type="button">Auswahl speichern</button>
+        <button id="btn-decline-all" class="cb-btn cb-btn-outline" type="button">Nur Essenziell</button>
+      </div>
+
+      <p class="small" style="margin-top:10px;text-align:center">
+        <a href="/datenschutz" rel="nofollow">Datenschutzerklärung</a> ·
+        <a href="/impressum" rel="nofollow">Impressum</a>
+      </p>
+    </div>
+  </div>
+</div>

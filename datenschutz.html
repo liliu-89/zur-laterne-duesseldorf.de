@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <script>
+    fetch('/includes/head.html')
+      .then(r => r.text())
+      .then(h => document.head.insertAdjacentHTML('afterbegin', h));
+  </script>
+
+  <title>Datenschutzerklärung | Zur Laterne</title>
+
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="googlebot" content="noindex,nofollow">
+  <meta name="theme-color" content="#bd2630">
+</head>
+
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <a href="/">Zur Laterne</a>
+      </div>
+      <nav aria-label="Hauptnavigation">
+        <a href="/">← Zurück zur Seite</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <div class="card-content">
+        <h1>Datenschutzerklärung</h1>
+
+        <div class="section">
+          <h2>1. Verantwortlicher</h2>
+          <p>Werner Breitreiter</p>
+          <p>
+            Zur Laterne<br>
+            Belsenstr. 8<br>
+            40545 Düsseldorf
+          </p>
+          <p>
+            Telefon: <a href="tel:+49211551570">+49 211 551570</a><br>
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>2. Allgemeines zur Datenverarbeitung</h2>
+          <p>Wir verarbeiten personenbezogene Daten nur, soweit dies zur Bereitstellung und Optimierung dieser Website erforderlich ist. Eine weitergehende Verarbeitung erfolgt nur mit Einwilligung oder auf Grundlage gesetzlicher Vorschriften.</p>
+          <p>Beim Aufruf der Website werden automatisch Server-Logfiles erfasst (z. B. IP-Adresse, Datum und Uhrzeit des Abrufs, verwendeter Browser). Diese Daten dienen ausschließlich der Sicherstellung eines störungsfreien Betriebs und werden nicht zur Identifizierung von Personen verwendet.</p>
+        </div>
+
+        <div class="section">
+          <h2>3. Cookies und lokale Speicherung</h2>
+          <p>Unsere Website verwendet ausschließlich technisch notwendige Cookies und lokale Speicherfunktionen (Local Storage), um Ihre Cookie-Einstellungen zu speichern. Ohne diese Daten kann der Consent-Banner technisch nicht funktionieren.</p>
+          <p>Statistik- oder Marketing-Cookies werden nur mit Ihrer ausdrücklichen Einwilligung gesetzt. Diese können Sie jederzeit über den Button „Cookie-Einstellungen“ (unten auf der Seite) anpassen.</p>
+        </div>
+
+        <div class="section">
+          <h2>4. Eingebettete Inhalte und externe Dienste</h2>
+          <p>a) Elfsight (Rezensionen-Widget)<br>
+            Wir binden über den Anbieter Elfsight Apps OÜ, Mustamäe tee 3a, 10615 Tallinn, Estland, ein Bewertungs-Widget ein, das Google-Bewertungen anzeigt. Dieses wird erst nach Ihrer Einwilligung in die Kategorie „Marketing“ geladen. Beim Laden werden Daten (z. B. Ihre IP-Adresse) an Server von Elfsight übertragen. Mehr Informationen: https://elfsight.com/privacy-policy/</p>
+          <p>b) Google Fonts (optional)<br>
+            Unsere Schriften werden lokal gehostet. Sofern Sie die Einbindung über externe Google-Server aktiviert haben (im Bereich „Marketing“), kann beim Laden eine Verbindung zu Servern von Google LLC (USA) aufgebaut werden. Dabei werden keine Cookies gesetzt. Mehr Informationen: https://policies.google.com/privacy</p>
+        </div>
+
+        <div class="section">
+          <h2>5. Rechtsgrundlagen der Verarbeitung</h2>
+          <p>Die Verarbeitung erfolgt auf Grundlage von:</p>
+          <ul>
+            <li>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse: sichere Bereitstellung der Website),</li>
+            <li>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung bei Statistik- und Marketing-Diensten).</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>6. Dauer der Speicherung</h2>
+          <p>Server-Logdaten werden in der Regel nach 14 Tagen automatisch gelöscht. Cookie-Einstellungen werden lokal gespeichert, bis Sie diese selbst löschen oder ändern.</p>
+        </div>
+
+        <div class="section">
+          <h2>7. Ihre Rechte</h2>
+          <p>Sie haben das Recht auf</p>
+          <ul>
+            <li>Auskunft über Ihre gespeicherten Daten,</li>
+            <li>Berichtigung oder Löschung,</li>
+            <li>Einschränkung der Verarbeitung,</li>
+            <li>Widerspruch gegen die Verarbeitung,</li>
+            <li>Datenübertragbarkeit,</li>
+            <li>sowie das Recht, eine erteilte Einwilligung jederzeit zu widerrufen.</li>
+          </ul>
+          <p>Hierzu können Sie sich jederzeit an den oben genannten Verantwortlichen wenden.</p>
+        </div>
+
+        <div class="section">
+          <h2>8. Aufsichtsbehörde</h2>
+          <p>Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren. Zuständig ist die Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW), Kavalleriestraße 2-4, 40213 Düsseldorf, https://www.ldi.nrw.de</p>
+        </div>
+
+        <div class="section">
+          <p>Stand: Oktober 2025</p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <strong>Zur Laterne</strong><br/>
+        Belsenstr. 8 · 40545 Düsseldorf
+      </div>
+      <div>
+        <a href="#" aria-current="page" rel="nofollow">Impressum</a> · <a href="/datenschutz" rel="nofollow">Datenschutz</a> · <a href="#" onclick="openConsentBanner();return false;">Cookie-Einstellungen</a>
+      </div>
+    </div>
+  </footer>
+  <!-- Consent-Banner Placeholder -->
+<div id="consent-placeholder"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("/includes/consent-banner.html", { cache: "no-store" })
+    .then(res => res.ok ? res.text() : Promise.reject(res))
+    .then(html => {
+      document.getElementById("consent-placeholder").innerHTML = html;
+
+      // Danach Banner-Skript laden
+      const script = document.createElement("script");
+      script.src = "/js/consent-banner.js";
+      script.defer = true;
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error("Consent include konnte nicht geladen werden:", err));
+});
+</script>
+</body>
+</html>

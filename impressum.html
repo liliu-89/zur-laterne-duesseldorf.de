@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <script>
+    fetch('/includes/head.html')
+      .then(r => r.text())
+      .then(h => document.head.insertAdjacentHTML('afterbegin', h));
+  </script>
+
+  <title>Impressum | Zur Laterne</title>
+
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="googlebot" content="noindex,nofollow">
+  <meta name="theme-color" content="#bd2630">
+</head>
+
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <a href="/">Zur Laterne</a>
+      </div>
+      <nav aria-label="Hauptnavigation">
+        <a href="/">← Zurück zur Seite</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <div class="card-content">
+        <h1>Impressum</h1>
+        <p class="meta">Angaben nach § 5 TMG</p>
+
+        <div class="section">
+          <h2>Betreiber</h2>
+          <p>Werner Breitreiter</p>
+          <p>
+            Zur Laterne<br>
+            Belsenstr. 8<br>
+            40545 Düsseldorf
+          </p>
+          <p>
+            Telefon: <a href="tel:+49211551570">+49 211 551570</a><br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <strong>Zur Laterne</strong><br/>
+        Belsenstr. 8 · 40545 Düsseldorf
+      </div>
+      <div>
+        <a href="#" aria-current="page" rel="nofollow">Impressum</a> · <a href="/datenschutz" rel="nofollow">Datenschutz</a> · <a href="#" onclick="openConsentBanner();return false;">Cookie-Einstellungen</a>
+      </div>
+    </div>
+  </footer>
+  <!-- Consent-Banner Placeholder -->
+<div id="consent-placeholder"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("/includes/consent-banner.html", { cache: "no-store" })
+    .then(res => res.ok ? res.text() : Promise.reject(res))
+    .then(html => {
+      document.getElementById("consent-placeholder").innerHTML = html;
+
+      // Danach Banner-Skript laden
+      const script = document.createElement("script");
+      script.src = "/js/consent-banner.js";
+      script.defer = true;
+      document.body.appendChild(script);
+    })
+    .catch(err => console.error("Consent include konnte nicht geladen werden:", err));
+});
+</script>
+</body>
+</html>
