@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>  
-  <script>
-    fetch('/includes/head.html')
-      .then(r => r.text())
-      .then(h => document.head.insertAdjacentHTML('afterbegin', h));
-  </script>  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.jsdelivr.net/gh/liliu-89/consent-banner@main/consent.js"
+    data-gtm="GTM-XXXX"
+    data-privacy="/datenschutz"
+    data-imprint="/impressum"
+    data-brand="#bd2630">
+  </script>
+
+  <script src="/js/marketing-loader.js" defer></script>
   
-    <link rel="icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/styles/styles.css">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/styles/styles.css">
 
   <title>Zur Laterne – Traditionslokal in Düsseldorf-Oberkassel | Rheinische Küche & Füchschen Alt</title>
   <meta name="description" content="Zur Laterne am Belsenplatz: Rheinische & gut bürgerliche Küche, Muscheln, Reibekuchen. Füchschen Alt vom Fass. Täglich ab 17 Uhr. Reservierung: 0211 551570.">
@@ -243,7 +249,7 @@
         Belsenstr. 8 · 40545 Düsseldorf
       </div>
       <div>
-        <a href="/impressum">Impressum</a> · <a href="datenschutz">Datenschutz</a> · <a href="#" onclick="openConsentBanner();return false;">Cookie-Einstellungen</a>
+        <a href="/impressum">Impressum</a> · <a href="/datenschutz">Datenschutz</a> · <a href="#" onclick="openConsentBanner(); return false;">Cookie Einstellungen</a>
       </div>
     </div>
   </footer>
@@ -260,46 +266,26 @@
       menuBtn.classList.toggle('open');
     });
     window.closeDrawer = closeDrawer;
-    </script>
+  </script>
 
-    <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener("click", function(e) {
-        const targetId = this.getAttribute("href").slice(1);
-        const target = document.getElementById(targetId);
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+          const targetId = this.getAttribute("href").slice(1);
+          const target = document.getElementById(targetId);
 
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          });
-        }
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
+          }
+        });
       });
     });
-  });
-</script>
-
-<!-- Consent-Banner Placeholder -->
-<div id="consent-placeholder"></div>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  fetch("/includes/consent-banner.html", { cache: "no-store" })
-    .then(res => res.ok ? res.text() : Promise.reject(res))
-    .then(html => {
-      document.getElementById("consent-placeholder").innerHTML = html;
-
-      // Danach Banner-Skript laden
-      const script = document.createElement("script");
-      script.src = "/js/consent-banner.js";
-      script.defer = true;
-      document.body.appendChild(script);
-    })
-    .catch(err => console.error("Consent include konnte nicht geladen werden:", err));
-});
-</script>
+  </script>
 
 </body>
 </html>
